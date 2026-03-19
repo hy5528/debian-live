@@ -27,7 +27,7 @@ jobs:
       - name: "Get Date"
         id: get_date
         run: |
-          echo "datestamp=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+          echo "datestamp=$(date -u +'%Y-%m-%d-%H%M%S')" >> $GITHUB_OUTPUT
 
       - name: "Checking out git repository"
         uses: actions/checkout@v6
@@ -42,7 +42,7 @@ jobs:
           token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           tag_name: "${{ steps.get_date.outputs.datestamp }}"
-          name: "Debian 13 Live Minimal ISO"
+          name: "Debian 13 Live Minimal ISO ${{ steps.get_date.outputs.datestamp }}"
           append_body: true
           generate_release_notes: true
           make_latest: true
