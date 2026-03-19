@@ -36,7 +36,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           automatic_release_tag: "${{ env.DATESTAMP }}"
-          title: "Debian 10 Live Minimal ISO"
+          title: "Debian 13 Live Minimal ISO"
           files: |
-            output/debian10-live-minimal-x86_64.iso
+            output/debian13-live-minimal-x86_64.iso
             output/packages.txt

@@ -9,7 +9,7 @@ echo Create directory where we will make the image
 mkdir -p $HOME/LIVE_BOOT
 
 echo Install Debian
-debootstrap --arch=amd64 --variant=minbase buster $HOME/LIVE_BOOT/chroot http://ftp.us.debian.org/debian/
+debootstrap --arch=amd64 --variant=minbase trixie $HOME/LIVE_BOOT/chroot http://deb.debian.org/debian/
 
 echo Copy supporting documents into the chroot
 cp -v /supportFiles/installChroot.sh $HOME/LIVE_BOOT/chroot/installChroot.sh
@@ -94,6 +94,6 @@ xorriso \
     "${HOME}/LIVE_BOOT/staging"
 
 echo Copy output
-cp -v $HOME/LIVE_BOOT/debian-custom.iso /output/debian10-live-minimal-x86_64.iso
-chmod -v 666 /output/debian10-live-minimal-x86_64.iso
+cp -v $HOME/LIVE_BOOT/debian-custom.iso /output/debian13-live-minimal-x86_64.iso
+chmod -v 666 /output/debian13-live-minimal-x86_64.iso
 ls -lah /output
