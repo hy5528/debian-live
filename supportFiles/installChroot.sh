@@ -46,7 +46,7 @@ rm /etc/resolv.conf
 ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 echo Set root password
-echo "root:toor" | chpasswd
+echo "root:123456" | chpasswd
 
 echo Remove machine-id
 rm /etc/machine-id
