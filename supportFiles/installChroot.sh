@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo Install security updates and apt-utils
 apt-get update
-apt-get -y install apt-utils
+apt-get -y install apt-utils nano nmtui
 apt-get -y upgrade
 
 echo Set locale
