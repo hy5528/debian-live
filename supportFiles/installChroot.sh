@@ -24,7 +24,7 @@ apt-get install -y --no-install-recommends systemd-resolved
 apt-get install -y bash-completion cifs-utils curl dbus dosfstools firmware-linux-free gddrescue gdisk iputils-ping isc-dhcp-client less nano nfs-common ntfs-3g openssh-server openssh-client open-vm-tools procps sudo  wimtools wget
 
 # 安装 Docker
-curl -fsSL https://get.docker.com -o get-docker.sh
+wget -qO- https://get.docker.com/ |  sh
 
 # 清理缓存
 apt autoremove -y && apt autoclean && apt remove -y && apt clean
