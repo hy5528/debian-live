@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo Install security updates and apt-utils
 apt-get update
-apt-get -y install apt-utils nano nmtui
+apt-get -y install apt-utils 
 apt-get -y upgrade
 
 echo Set locale
@@ -21,7 +21,7 @@ update-locale LANG=en_US.UTF-8
 echo Install packages
 apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv
 apt-get install -y --no-install-recommends systemd-resolved
-apt-get install -y bash-completion cifs-utils curl dbus dosfstools firmware-linux-free gddrescue gdisk iputils-ping isc-dhcp-client less nfs-common ntfs-3g openssh-client open-vm-tools procps vim wimtools wget
+apt-get install -y bash-completion cifs-utils curl dbus dosfstools firmware-linux-free gddrescue gdisk iputils-ping isc-dhcp-client less nano nmtui nfs-common ntfs-3g openssh-server openssh-client open-vm-tools procps  wimtools wget
 
 echo Clean apt post-install
 apt-get clean
