@@ -29,6 +29,9 @@ wget -qO- https://get.docker.com/ |  sh
 # 清理缓存
 apt autoremove -y && apt autoclean && apt remove -y && apt clean
 
+# 安装
+sudo curl -L "https://github.com/docker/compose/releases/download/v5.3.1/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 
 echo Enable systemd-networkd as network manager
 systemctl enable systemd-networkd
