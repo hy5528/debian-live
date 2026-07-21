@@ -3,7 +3,7 @@ Builds a Debian 13 (Trixie) Live x86-64 ISO monthly using GitHub Actions. Used p
 
 
 ## Default Password
-The default username and password is root / toor.
+The default username and password is root / 123456
 
 
 ## Installation Options
